@@ -1,0 +1,72 @@
+{
+    "name": "wxa/hyperf-signature-sdk",
+    "description": "The api signature for Nick Framework",
+    "keywords": [
+      "Nick",
+      "hyperf",
+      "signature",
+      "framework",
+      "wxa",
+      "hmac",
+      "sha256",
+      "sha1",
+      "md5",
+      "fw"
+    ],
+    "type": "library",
+    "authors": [
+      {
+        "name": "huangnie",
+        "email": "980484578@qq.com"
+      }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "autoload": {
+        "files": [
+
+        ],
+        "psr-4": {
+            "Nick\\Signature\\Api\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\Nick\\ApiSignature\\": "tests"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "hyperf": {
+            "config": "Nick\\Signature\\Api\\Providers\\ConfigProvider"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "hyperf/framework": "~2.0.0",
+        "hyperf/constants": "~2.0.0",
+        "hyperf/utils": "~2.0.0",
+        "hyperf/guzzle": "~2.0.0",
+        "hyperf/testing": "^2.0",
+        "psr/container": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.14",
+        "mockery/mockery": "^1.2"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "co-phpunit -c phpunit.xml --colors=always",
+        "cs-fix": "php-cs-fixer fix $1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://mirrors.aliyun.com/composer/"
+        }
+    ]
+}

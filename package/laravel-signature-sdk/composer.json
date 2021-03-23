@@ -1,0 +1,57 @@
+{
+  "name": "nick/laravel-signature-sdk",
+  "description": "The api signature for Nick Framework",
+  "keywords": [
+    "Nick",
+    "laravel",
+    "signature",
+    "framework",
+    "wxa",
+    "hmac",
+    "sha256",
+    "sha1",
+    "md5",
+    "fw"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "huangnie",
+      "email": "980484578@qq.com"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1",
+    "laravel/framework": "^6.2",
+    "guzzlehttp/guzzle": "^6.2"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Nick\\Signature\\Api\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    },
+    "laravel": {
+        "providers": [
+            "Nick\\Signature\\Api\\Providers\\ConfigServiceProvider"
+        ],
+        "aliases": {
+            "SignatureApiRequest": "Nick\\Signature\\Api\\Facade\\RequestFacade"
+        }
+    }
+  },
+  "repositories": [
+    {
+        "type": "composer",
+        "url": "https://mirrors.aliyun.com/composer/"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "7.5"
+  }
+}
